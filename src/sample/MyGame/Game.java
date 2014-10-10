@@ -6,19 +6,22 @@ package sample.MyGame;
  */
 public class Game {
 
+    public static enum CellType{Street, Start, Prison, Chance, Bank, Station, Utility }
+
     public Game(){}
 
     private Field field;
     private Player[] players;
 
-    public void StartGame(){
-        IFieldFactory factory = new FieldFactory();
-        field = factory.GetGameField();
+    public void StartGame() {
+
+/*
         //спрашиваем количство игроков
         StartSettings dialog = new StartSettings();
         dialog.show();
         //получаем количество игроков и создаём массив
+
+*/
+
     }
-
-
 }
