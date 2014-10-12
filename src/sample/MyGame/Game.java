@@ -8,7 +8,13 @@ public class Game {
 
     public static enum CellType{Street, Start, Prison, Chance, Bank, Station, Utility }
 
-    public Game(){}
+    private static Game instance;
+    public static Game GetGame(){
+        if (instance == null) {return new Game();}
+        else {return instance;}
+    }
+
+    private Game(){}
 
     private Field field;
     private Player[] players;

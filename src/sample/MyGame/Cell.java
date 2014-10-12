@@ -60,14 +60,14 @@ public class Cell {
         this.houses = 0;
         this.houseCost = houseCost;
         this.collateral = collateral;
-        ICellFactory cellFactory = new CellFactory();
+        /*ICellFactory cellFactory = new CellFactory();
 
         Cell bufCell = cellFactory.GetCell();
         if (!bufCell.equals(Field.GetGameField()))
         {
             this.nextCell = cellFactory.GetCell();
         }
-        else this.nextCell = Field.GetGameField().getStartCell();
+        else this.nextCell = Field.GetGameField().getStartCell();*/
     }
 
     public Cell GoToNextCell(){
