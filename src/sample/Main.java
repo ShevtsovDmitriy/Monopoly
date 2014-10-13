@@ -59,6 +59,8 @@ public class Main extends Application {
         System.out.print(str);
 */
         CellFactory.GetCell();
+        CellFactory.GetCell();
+
         System.out.print("\ntest");
     }
 }

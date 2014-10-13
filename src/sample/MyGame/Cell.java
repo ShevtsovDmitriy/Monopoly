@@ -1,5 +1,7 @@
 package sample.MyGame;
 
+import java.util.ArrayList;
+
 /**
  * Created by Дмитрий on 06.10.2014.
  */
@@ -35,9 +37,9 @@ public class Cell {
         }
     }
 
-    private int[] rate;
+    private ArrayList<Integer> rate;
     private int getRate(){
-        return rate[houses];
+        return rate.get(houses);
     }
 
     private int houseCost;
@@ -52,7 +54,7 @@ public class Cell {
 
     private Cell nextCell;
 
-    public Cell(int id, String name, Game.CellType type, int cost, int[] rate, int houseCost, int collateral){
+    public Cell(int id, String name, Game.CellType type, int cost, ArrayList<Integer> rate, int houseCost, int collateral){
         this.id = id;
         this.name = name;
         this.cost = cost;
