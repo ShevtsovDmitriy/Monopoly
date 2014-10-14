@@ -1,5 +1,7 @@
 package sample.MyGame;
 
+import java.util.ArrayList;
+
 /**
  * Created by Дмитрий on 06.10.2014.
  */
@@ -15,7 +17,7 @@ public class Field {
     private static Field gameField;
 
     protected Field(){
-        startCell = new Cell(0, "Старт", Game.CellType.Start, 0, new int[] {0}, 0, 0);
+        startCell = new Cell(0, "Старт", Game.CellType.Start, 0, new ArrayList<Integer>(), 0, 0);
     }
 
     private Cell startCell;

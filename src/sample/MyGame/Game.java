@@ -14,20 +14,16 @@ public class Game {
         else {return instance;}
     }
 
-    private Game(){}
+    private Game(){
+        field = Field.GetGameField();
+    }
 
     private Field field;
     private Player[] players;
 
     public void StartGame() {
 
-/*
-        //спрашиваем количство игроков
-        StartSettings dialog = new StartSettings();
-        dialog.show();
-        //получаем количество игроков и создаём массив
 
-*/
 
     }
 }

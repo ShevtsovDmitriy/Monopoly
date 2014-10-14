@@ -5,7 +5,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sample.MyGame.Cell;
 import sample.MyGame.CellFactory;
+import sample.MyGame.Field;
 import sample.MyGame.Game;
 
 import java.io.*;
@@ -24,43 +26,13 @@ public class Main extends Application {
     public static void main(String[] args) throws FileNotFoundException {
         launch(args);
         Game game = Game.GetGame();
-        /*File my_file = new File("my file");
-        if (!my_file.exists())
-        {
-            try {
-                my_file.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        PrintWriter printWriter = new PrintWriter(my_file);
-        try {
-            printWriter.print(1 + " ");
-            printWriter.print("Нагатинская ");
-            printWriter.print(0 + " ");
-
-        }
-        finally {
-            printWriter.close();
+        Cell cell = Field.GetGameField().getStartCell();
+        for(int i = 0; i<5; i++){
+            //cell.PrintInfo();
+            System.out.print(cell + "\n");
+            cell = cell.GoToNextCell();
         }
 
-        String str = "";
-        BufferedReader in = new BufferedReader(new FileReader(my_file));
-        try {
-            str = in.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
-            in.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.print(str);
-*/
-        CellFactory.GetCell();
-        CellFactory.GetCell();
-
-        System.out.print("\ntest");
+        //System.out.print("\ntest");
     }
 }

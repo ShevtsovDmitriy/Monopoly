@@ -62,18 +62,25 @@ public class Cell {
         this.houses = 0;
         this.houseCost = houseCost;
         this.collateral = collateral;
-        /*ICellFactory cellFactory = new CellFactory();
 
-        Cell bufCell = cellFactory.GetCell();
-        if (!bufCell.equals(Field.GetGameField()))
-        {
-            this.nextCell = cellFactory.GetCell();
+        if (!CellFactory.isItEnd()) {
+            Cell bufCell = CellFactory.GetCell();
+            if (bufCell == null) {
+                this.nextCell = Field.GetGameField().getStartCell();
+            } else {
+                this.nextCell = bufCell;
+
+            }
         }
-        else this.nextCell = Field.GetGameField().getStartCell();*/
     }
 
     public Cell GoToNextCell(){
-        return nextCell;
+        return this.nextCell;
+    }
+
+    public void PrintInfo()
+    {
+        System.out.print(name);
     }
 
 }
