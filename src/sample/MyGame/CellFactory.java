@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 public class CellFactory {
 
-    private static File my_file = new File("my file");
+    private static File my_file = new File("Map.res");
     private static BufferedReader in;
 
     private static boolean itEnd = false;

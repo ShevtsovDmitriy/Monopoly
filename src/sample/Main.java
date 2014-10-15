@@ -30,10 +30,13 @@ public class Main extends Application {
         Cell cell = Field.GetGameField().getStartCell();
         for(int i = 0; i<5; i++){
             cell.PrintInfo();
-            //System.out.print(cell + "\n");
             cell = cell.GoToNextCell();
+            Game.CellType c = Game.CellType.Street;
+            switch (c){
+                case Bank:{
+                    System.out.print("");
+                }
+            }
         }
-
-        //System.out.print("\ntest");
     }
 }
