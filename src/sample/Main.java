@@ -26,10 +26,11 @@ public class Main extends Application {
     public static void main(String[] args) throws FileNotFoundException {
         launch(args);
         Game game = Game.GetGame();
+        game.StartGame();
         Cell cell = Field.GetGameField().getStartCell();
         for(int i = 0; i<5; i++){
-            //cell.PrintInfo();
-            System.out.print(cell + "\n");
+            cell.PrintInfo();
+            //System.out.print(cell + "\n");
             cell = cell.GoToNextCell();
         }
 

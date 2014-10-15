@@ -52,7 +52,7 @@ public class Cell {
         return collateral;
     }
 
-    private Cell nextCell;
+    private Cell nextCell = null;
 
     public Cell(int id, String name, Game.CellType type, int cost, ArrayList<Integer> rate, int houseCost, int collateral){
         this.id = id;
@@ -63,7 +63,7 @@ public class Cell {
         this.houseCost = houseCost;
         this.collateral = collateral;
 
-        if (!CellFactory.isItEnd()) {
+        /*if (!CellFactory.isItEnd()) {
             Cell bufCell = CellFactory.GetCell();
             if (bufCell == null) {
                 this.nextCell = Field.GetGameField().getStartCell();
@@ -71,7 +71,7 @@ public class Cell {
                 this.nextCell = bufCell;
 
             }
-        }
+        }*/
     }
 
     public Cell GoToNextCell(){
@@ -81,6 +81,12 @@ public class Cell {
     public void PrintInfo()
     {
         System.out.print(name);
+    }
+
+    public void SetNextCell(){
+        if (nextCell == null){
+            this.nextCell = CellFactory.GetCell();
+        }
     }
 
 }

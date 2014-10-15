@@ -22,8 +22,6 @@ public class Game {
     private Player[] players;
 
     public void StartGame() {
-
-
-
+        field.SetNextCells();
     }
 }

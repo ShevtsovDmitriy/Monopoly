@@ -37,7 +37,6 @@ public class CellFactory {
 
         }
         else {System.out.print("File not found");}
-
         if(str != null) {
             Integer id = 0;
             String name = "";
@@ -112,7 +111,7 @@ public class CellFactory {
         else
         {
             itEnd = true;
-            return null;
+            return Field.GetGameField().getStartCell();
         }
     }
 
