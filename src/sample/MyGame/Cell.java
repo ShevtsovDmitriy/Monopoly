@@ -86,6 +86,10 @@ public class Cell {
     public void SetNextCell(){
         if (nextCell == null){
             this.nextCell = CellFactory.GetCell();
+            if(nextCell.getType() == Game.CellType.Prison){
+                Field field = Field.GetGameField();
+                field.SetPrison(nextCell);
+            }
         }
     }
 

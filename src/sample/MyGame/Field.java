@@ -25,6 +25,16 @@ public class Field {
         return startCell;
     }
 
+    private Cell prison = null;
+    public Cell getPrison() {
+        return prison;
+    }
+    public void SetPrison(Cell cell){
+        if (prison == null && (cell.getType() == Game.CellType.Prison)){
+            prison = cell;
+        }
+    }
+
     public boolean GoToNextCell(Player player){
         return true;
         //TODO: create method to navigate on cells
@@ -38,7 +48,6 @@ public class Field {
             buf = buf.GoToNextCell();
         }
     }
-
 
 
 

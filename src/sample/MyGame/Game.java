@@ -6,7 +6,7 @@ package sample.MyGame;
  */
 public class Game {
 
-    public static enum CellType{Street, Start, Prison, Chance, Bank, Station, Utility }
+    public static enum CellType{Street, Start, Prison, Chance, Bank, Station, Utility, Tax }
 
     private static Game instance;
     public static Game GetGame(){
